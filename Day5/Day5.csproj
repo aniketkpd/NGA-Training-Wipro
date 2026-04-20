@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Day5.UseOfTuples</StartupObject>
+    <StartupObject>day5.PatternMatching</StartupObject>
   </PropertyGroup>
 
 </Project>
