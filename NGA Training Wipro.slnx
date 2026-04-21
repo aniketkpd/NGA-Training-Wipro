@@ -5,5 +5,4 @@
   <Project Path="Day4/Day4.csproj" />
   <Project Path="Day5/Day5.csproj" Id="ffe69cd9-1bb5-448c-a65b-ca19829bd6c5" />
   <Project Path="Day6/Day6.csproj" Id="05866ebc-fa8d-4fd2-9772-17a7cb0d8e08" />
-  <Project Path="WinFormsApp4/Day6(StopWatchApp).csproj" Id="5250a577-fd44-42ec-b7a2-de8a603fbe37" />
 </Solution>
