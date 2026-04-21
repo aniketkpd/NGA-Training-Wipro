@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Reflection.PortableExecutable;
 using System.Text;
 
+
+//public subscribe model using events
+
+
 namespace Day6
 {
 

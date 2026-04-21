@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
+
+//publisher-subscriber model
+
 namespace Day6
 {
     class Publisher

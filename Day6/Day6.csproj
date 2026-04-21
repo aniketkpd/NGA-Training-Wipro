@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Day6.ScenarioNewsAgencyPubSubModel</StartupObject>
+    <StartupObject>Day6.pubsubmodel</StartupObject>
   </PropertyGroup>
 
 </Project>
