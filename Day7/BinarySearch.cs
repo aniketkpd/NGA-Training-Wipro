@@ -30,6 +30,7 @@ class BinarySearchClass
     static void Main()
     {
         int[] arr = { 1, 2, 3, 5, 8 }; // Note: The array must be sorted for binary search
+
         int target = 3;
         int index = BinarySearch(arr, target);
         if (index != -1)
