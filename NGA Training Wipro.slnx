@@ -7,4 +7,5 @@
   <Project Path="Day5/Day5.csproj" Id="ffe69cd9-1bb5-448c-a65b-ca19829bd6c5" />
   <Project Path="Day6 StopWatchApp/Day6 StopWatchApp.csproj" Id="cb58a6de-c5f6-4d11-9395-426e6a04f662" />
   <Project Path="Day6/Day6.csproj" Id="05866ebc-fa8d-4fd2-9772-17a7cb0d8e08" />
+  <Project Path="Day7/Day7.csproj" Id="1a19a192-25a8-4539-a162-c1c704c1e1ba" />
 </Solution>
