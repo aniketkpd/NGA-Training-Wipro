@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Day8.UseOfBuiltInDeligates</StartupObject>
+    <StartupObject>Day8.ScenarioOngenerics</StartupObject>
   </PropertyGroup>
 
 </Project>
