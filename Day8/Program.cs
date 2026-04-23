@@ -1,6 +1,4 @@
-﻿//Student Activity Evaluation 
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 class Student
@@ -11,21 +9,16 @@ class Student
     public int Participation;
 }
 
+
+
 class Program
 {
-
-
-    // delegate for evaluation
-    delegate void EvaluateStudent(Student s);
-
-    public static void Main(string[] args)
+    public static void Main()
     {
+
         List<Student> students = new List<Student>()
-        
-        
-        
-        
-        // sample student
+
+
         {
             new Student { Name = "Arjun", Marks = 60, Attendance = 80, Participation = 70 },
             new Student { Name = "Meera", Marks = 45, Attendance = 60, Participation = 50 },
@@ -33,45 +26,59 @@ class Program
             new Student { Name = "Riya", Marks = 30, Attendance = 50, Participation = 40 }
         };
 
-       
-        
-        
-        // anonymous method
-        EvaluateStudent evaluator = delegate (Student s)
-        {
-            int totalScore = s.Marks + s.Attendance + s.Participation;
 
+
+        // calculating total marks using Func delegate
+        Func<Student, int> calculateTotal = delegate (Student s)
+        {
+            return s.Marks + s.Attendance + s.Participation;
+        };
+
+
+
+        // displaying student details using Action delegate
+        Action<Student> displayStudent = (s) =>
+        {
             Console.WriteLine("----- Student Report -----");
             Console.WriteLine("Name: " + s.Name);
             Console.WriteLine("Marks: " + s.Marks);
             Console.WriteLine("Attendance: " + s.Attendance);
             Console.WriteLine("Participation: " + s.Participation);
-            Console.WriteLine("Total Score: " + totalScore);
+            Console.WriteLine("Total Score: " + calculateTotal(s));
 
-            if (totalScore >= 200)
+
+
+            if (calculateTotal(s) >= 200)
+            { 
                 Console.WriteLine("Performance: Excellent");
-            else if (totalScore >= 150)
+            }
+            else if (calculateTotal(s) >= 150)
+            {
                 Console.WriteLine("Performance: Good");
+            }
             else
+            { 
                 Console.WriteLine("Performance: Needs Improvement");
+            }
 
             Console.WriteLine();
         };
 
 
 
-
-        // calling the delegate for each student for evaluation
+        //  calling the delegates
         foreach (var s in students)
         {
-            evaluator(s);
+            displayStudent(s); 
         }
 
 
 
 
-        // lambda Expression - for checking eligibility based on marks
-        Predicate<Student> isEligible = s => s.Marks > 50;
+
+
+        // checking eligibility using Predicate delegate
+        Predicate<Student> isEligible = (s) => s.Marks > 50;
 
         Console.WriteLine("----- Eligible Students (Marks > 50) -----");
         foreach (var s in students)
@@ -80,12 +87,12 @@ class Program
                 Console.WriteLine(s.Name);
         }
 
-
-
-
-
-
-        // Lambda + FindAll  - to filter top performers
+        
+        
+        
+        
+        
+        // filtering top performers
         List<Student> topStudents = students.FindAll(s => s.Marks > 75);
 
         Console.WriteLine("\n----- Top Performers (Marks > 75) -----");
@@ -93,5 +100,7 @@ class Program
         {
             Console.WriteLine(s.Name);
         }
+
+
     }
 }
