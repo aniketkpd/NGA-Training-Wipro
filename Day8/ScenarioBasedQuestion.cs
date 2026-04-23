@@ -11,7 +11,7 @@ class Student
 
 
 
-class Program
+class ScenarioBasedQuestion
 {
     public static void Main()
     {
