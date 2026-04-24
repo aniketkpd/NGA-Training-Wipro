@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Day9.Threading.UseOfTask</StartupObject>
+    <StartupObject>Day9.AsyncAwaitWorking.HowAsync_AwaitWorks</StartupObject>
   </PropertyGroup>
 
 </Project>
