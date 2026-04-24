@@ -1,0 +1,23 @@
+#Commands to create different apps in c#
+Commands to Create a Console Application:
+
+1. dotnet new console -n MyApp
+2. cd MyApp
+3. dotnet run
+
+
+
+Commands to create a Razor page:
+
+1. dotnet new razor
+2. dotnet build
+3. dotnet run
+
+
+Commands to create MVC
+1. dotnet new mvc
+2. dotnet run
+
+
+Commands to create webapi
+1. dotnet new webapi
