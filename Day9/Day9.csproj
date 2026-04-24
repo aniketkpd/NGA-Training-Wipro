@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Day9.Structure_in_c_Sharp.UseOfStruct</StartupObject>
+    <StartupObject>Day9.async0</StartupObject>
   </PropertyGroup>
 
 </Project>
