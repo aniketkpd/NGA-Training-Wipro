@@ -76,7 +76,7 @@ namespace Day10
                 string hashed = HashPassword(password);
                 string userRecord = username + "|" + role + "|" + hashed;
 
-                File.AppendAllText(filePath, userRecord + Environment.NewLine);
+                File.AppendAllText(filePath, userRecord + "\n");
                 Console.WriteLine("User registered successfully with hashed password.");
             }
             catch
