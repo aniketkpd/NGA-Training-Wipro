@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>SecureAuthDemo.Program</StartupObject>
+    <StartupObject>Day10.ScenarioOnHashing_v2</StartupObject>
   </PropertyGroup>
 
 </Project>
