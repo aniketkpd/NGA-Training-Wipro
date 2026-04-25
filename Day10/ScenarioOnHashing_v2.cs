@@ -7,7 +7,9 @@ namespace Day10
 {
     class ScenarioOnHashing_v2
     {
-        static string filePath = @"users.txt";
+
+        static string filePath = "C:\\Users\\Aniket\\source\\repos\\NGA Training Wipro\\Day10\\users.txt";
+
 
 
 
