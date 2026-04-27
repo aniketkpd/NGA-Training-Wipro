@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Console App (.NET)/Console App (.NET).csproj" />
+  <Project Path="SecureApp.Tests/SecureApp.Tests.csproj" />
+</Solution>

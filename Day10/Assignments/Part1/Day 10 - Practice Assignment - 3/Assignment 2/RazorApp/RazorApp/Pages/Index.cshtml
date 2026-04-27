@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+
+<h2>Item List</h2>
+
+<ul>
+    @foreach (var item in Model.Items)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+<a href="/AddItem">Add Item</a>
