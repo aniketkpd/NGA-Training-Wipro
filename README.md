@@ -36,7 +36,7 @@ This intensive program builds a complete **.NET Full Stack Developer** skillset,
 | **9. Capstone Project** | Agile Sprint Planning, Development & Review (Full-stack application) |
 | **10. Modern Tools** | GitHub Copilot, Agentic AI, Prompt Engineering, Responsible AI, Microsoft 365 Copilot, RAG Basics |
 
-**Full day-wise schedule** is available in the attached PDF: [`Wipro NGA - Program Structure.pdf`](./Wipro%20NGA%20-%20Program%20Structure.pdf)
+
 
 ---
 
@@ -57,5 +57,6 @@ NGA-Training-Wipro/
 ├── Day11/           # SQL Principles & Design Patterns
 ├── Day12/           # SQL Variables, Keys & Constraints
 ├── Practice/        # Extra practice exercises & mini-projects
+...
 ├── README.md
-└── Wipro NGA - Program Structure.pdf   # Official program schedule
+└── Wipro NGA 
