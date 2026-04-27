@@ -1,14 +1,14 @@
 <Solution>
-  <Project Path="Day1/Day1.csproj" />
+  <Project Path="Day1/Day01.csproj" />
   <Project Path="Day10/Day10.csproj" Id="79dd6d32-7a85-4fa8-83f7-b1e33983e074" />
-  <Project Path="Day2/Day2.csproj" />
-  <Project Path="Day3/Day3.csproj" />
-  <Project Path="Day4/Day4.csproj" />
-  <Project Path="Day5/Day5.csproj" Id="ffe69cd9-1bb5-448c-a65b-ca19829bd6c5" />
+  <Project Path="Day2/Day02.csproj" />
+  <Project Path="Day3/Day03.csproj" />
+  <Project Path="Day4/Day04.csproj" />
+  <Project Path="Day5/Day05.csproj" Id="ffe69cd9-1bb5-448c-a65b-ca19829bd6c5" />
   <Project Path="Day6 StopWatchApp/Day6 (FormApp) Stop Watch.csproj" />
-  <Project Path="Day6/Day6.csproj" Id="05866ebc-fa8d-4fd2-9772-17a7cb0d8e08" />
-  <Project Path="Day7/Day7.csproj" Id="1a19a192-25a8-4539-a162-c1c704c1e1ba" />
-  <Project Path="Day8/Day8.csproj" Id="eae3feda-5835-4080-9d6c-b18c8421ce53" />
-  <Project Path="Day9/Day9.csproj" Id="5bd027a2-e1f1-4af6-bb5d-74c66ee8c69b" />
+  <Project Path="Day6/Day06.csproj" Id="05866ebc-fa8d-4fd2-9772-17a7cb0d8e08" />
+  <Project Path="Day7/Day07.csproj" Id="1a19a192-25a8-4539-a162-c1c704c1e1ba" />
+  <Project Path="Day8/Day08.csproj" Id="eae3feda-5835-4080-9d6c-b18c8421ce53" />
+  <Project Path="Day9/Day09.csproj" Id="5bd027a2-e1f1-4af6-bb5d-74c66ee8c69b" />
   <Project Path="Practice/Practice.csproj" Id="21904c58-0129-4aa8-b08b-39b6f68c277d" />
 </Solution>
