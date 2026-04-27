@@ -1,0 +1,41 @@
+For CLI
+dotnet new console -n DemoTestingApp
+dotnet new mstest -n DemoApp.Tests
+dotnet add DemoApp.Tests reference DemoTestingApp
+
+
+
+
+
+
+
+For VS Code:
+Ctrl + Shift + P
+
+Step 1:
+Ctrl + Shift + P
+.NET: New Project
+A. Main project (logic)
+Choose: Console App
+Name: DemoTestingApp
+
+
+Step 2:
+Ctrl + Shift + P
+.NET: New Project
+Choose: MSTest Test Project
+Name: DemoApp.Tests
+
+
+Step 3:
+Go to terminal:
+dotnet add DemoApp.Tests reference DemoTestingApp
+
+
+
+
+Step 4: Edit Program.cs in console app
+
+Step 5: Edit Test1.cs in test app
+
+Step 6: Go to view-> test -> run.
