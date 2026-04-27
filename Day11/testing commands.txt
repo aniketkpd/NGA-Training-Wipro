@@ -22,7 +22,7 @@ Name: DemoTestingApp
 
 Step 2:
 Ctrl + Shift + P
-.NET: New Project
+B. .NET: New Project
 Choose: MSTest Test Project
 Name: DemoApp.Tests
 
