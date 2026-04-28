@@ -7,6 +7,7 @@ namespace DigitalWalletApp.Services
         private readonly IPayment _payment;
         private readonly INotification _notification;
 
+        //Constructor
         public WalletService(IPayment payment, INotification notification)
         {
             _payment = payment;
