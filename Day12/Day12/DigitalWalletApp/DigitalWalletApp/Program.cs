@@ -15,8 +15,6 @@ namespace DigitalWalletApp
             WalletService wallet = new WalletService(payment, notification);
 
             wallet.MakePayment(1000);
-
-            Console.ReadLine();
         }
     }
 }
