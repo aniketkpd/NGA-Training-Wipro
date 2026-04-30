@@ -78,5 +78,33 @@ FROM Employees;
 
 
 
+GO
+
+-- an Inline TVF to return EMP from HR dept
+CREATE FUNCTION dbo.GetEmployeebyDept(@Dept VARCHAR(50))
+RETURNS TABLE
+AS
+
+RETURN
+(
+    SELECT EmpID,
+    FirstName,
+    LastName,
+    Department,
+    Salary
+    FROM Employees
+    WHERE Department = @dept
+);
+
+
+GO
+
+
+-- calling above funcion
+SELECT * FROM dbo.GetEmployeebyDept('HR');
+SELECT * FROM dbo.GetEmployeebyDept('IT');
+
+
+
 
 
