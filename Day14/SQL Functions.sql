@@ -141,9 +141,10 @@ END;
 
 GO
 
--- CALLING
 
-SELECT FirstName, dbo.GetAnnualSalary(Salary) AS AnnualSalary
+-- CALLING
+SELECT  dbo.GETFULLNAME(FirstName, LastName) AS FullName, 
+        dbo.GetAnnualSalary(Salary) AS AnnualSalary
 FROM Employees;
 
 
@@ -174,7 +175,8 @@ GO
 
 
 -- CALLING
-SELECT FirstName, Salary,
+SELECT dbo.GETFULLNAME(FirstName, LastName) AS FullName,
+       Salary,
        dbo.GetNameBySalary(Salary, 60000) AS Status
 FROM Employees;
 
@@ -185,7 +187,7 @@ GO
 
 
 
--- Bonus logic based on department
+-- Bonus based on department
 CREATE FUNCTION dbo.CalculateDeptBonus
 (
     @Dept VARCHAR(50),
@@ -210,7 +212,9 @@ GO
 
 
 -- CALLING
-SELECT FirstName, Department, Salary,
+SELECT dbo.GETFULLNAME(FirstName, LastName) AS FullName,
+       Department,
+       Salary,
        dbo.CalculateDeptBonus(Department, Salary) AS Bonus
 FROM Employees;
 
@@ -229,7 +233,9 @@ RETURNS TABLE
 AS
 RETURN
 (
-    SELECT FirstName, Salary, Salary * 12 AS AnnualSalary
+    SELECT dbo.GETFULLNAME(FirstName, LastName) AS FullName,
+           Salary,
+           Salary * 12 AS AnnualSalary
     FROM Employees
 );
 
@@ -259,7 +265,7 @@ RETURNS TABLE
 AS
 RETURN
 (
-    SELECT FirstName, LastName, Salary
+    SELECT dbo.GETFULLNAME(FirstName, LastName) AS FullName , LastName, Salary
     FROM Employees
     WHERE Salary > @entervalue
 );
@@ -289,7 +295,7 @@ AS
 RETURN
 (
     SELECT 
-        FirstName,
+        dbo.GETFULLNAME(FirstName, LastName) AS FullName,
         Department,
         Salary,
         CASE
