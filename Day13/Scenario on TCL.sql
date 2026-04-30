@@ -1,7 +1,8 @@
 USE NFSDB;
 
 
-CREATE TABLE Accounts (
+CREATE TABLE Accounts 
+(
     AccountId INT PRIMARY KEY,
     Balance INT NOT NULL
 );
