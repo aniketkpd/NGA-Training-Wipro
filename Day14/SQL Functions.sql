@@ -13,6 +13,7 @@ CREATE TABLE Employees
     Salary INT
 );
 
+
 GO
 
 
@@ -265,7 +266,7 @@ RETURNS TABLE
 AS
 RETURN
 (
-    SELECT dbo.GETFULLNAME(FirstName, LastName) AS FullName , LastName, Salary
+    SELECT dbo.GETFULLNAME(FirstName, LastName) AS FullName , Salary
     FROM Employees
     WHERE Salary > @entervalue
 );
@@ -314,3 +315,5 @@ GO
 -- calling
 
 SELECT * FROM dbo.GetBonusByDept();
+
+
