@@ -2,11 +2,17 @@
 
 namespace WithOCP
 {
+
+    // By using an interface, we can add new payment types without modifying the existing code
     public interface IPayment
     {
         void Pay();
     }
 
+
+
+
+    // Each payment type implements the IPayment interface, allowing us to add new payment types without modifying existing code
     public class CreditCardPayment : IPayment
     {
         public void Pay()
@@ -14,6 +20,10 @@ namespace WithOCP
             Console.WriteLine("Paid using Credit Card");
         }
     }
+
+
+
+
 
     public class PayPalPayment : IPayment
     {
@@ -23,6 +33,11 @@ namespace WithOCP
         }
     }
 
+
+
+
+
+
     public class UpiPayment : IPayment
     {
         public void Pay()
@@ -31,6 +46,10 @@ namespace WithOCP
         }
     }
 
+
+
+
+
     public class PaymentProcessor
     {
         public void Process(IPayment payment)
@@ -38,6 +57,10 @@ namespace WithOCP
             payment.Pay();
         }
     }
+
+
+
+
 
     class ProgramWithOCP
     {

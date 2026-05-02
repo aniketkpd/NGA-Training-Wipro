@@ -2,8 +2,14 @@
 
 namespace WithoutOCP
 {
+
+
+
+
+    // Later if we get a requirement to add a new payment type, we will have to modify the existing code which is not a good practice and violates OCP
     public class PaymentProcessor
     {
+
         public void Pay(string paymentType)
         {
             if (paymentType == "CreditCard")
@@ -16,6 +22,10 @@ namespace WithoutOCP
             }
         }
     }
+
+
+
+
 
     class ProgramWithoutOCP
     {

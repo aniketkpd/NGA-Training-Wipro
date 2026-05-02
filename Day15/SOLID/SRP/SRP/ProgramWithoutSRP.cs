@@ -1,45 +1,59 @@
 ﻿using System;
 
-namespace WithSRP
+namespace WithoutSRP
 {
     public class Invoice
     {
         public int Amount { get; set; }
 
+
+        
+        // Task 1
         public void CalculateTotal()
         {
             Console.WriteLine("Calculating total: " + Amount);
         }
-    }
 
-    public class InvoicePrinter
-    {
-        public void Print()
+
+
+
+
+        // Task 2
+        public void PrintInvoice()
         {
             Console.WriteLine("Printing invoice...");
         }
-    }
 
-    public class InvoiceRepository
-    {
-        public void Save()
+    
+        
+        
+        // Task 3
+        public void SaveToDatabase()
         {
             Console.WriteLine("Saving to database...");
         }
     }
 
-    class ProgramWithSRP
+
+
+
+
+
+
+
+
+    class ProgramWithoutSRP
     {
         static void Main(string[] args)
         {
-            Invoice invoice = new Invoice { Amount = 100 };
+            Invoice invoice = new Invoice 
+            { 
+                Amount = 100 
+            };
+
             invoice.CalculateTotal();
-
-            InvoicePrinter printer = new InvoicePrinter();
-            printer.Print();
-
-            InvoiceRepository repo = new InvoiceRepository();
-            repo.Save();
+            invoice.PrintInvoice();
+            invoice.SaveToDatabase();
 
             Console.ReadLine();
         }

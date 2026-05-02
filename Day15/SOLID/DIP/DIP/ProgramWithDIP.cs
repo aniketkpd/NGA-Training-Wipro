@@ -8,6 +8,10 @@ namespace WithDIP
         void Send(string message);
     }
 
+
+
+
+
     // Low Level Code | Details | Methods to achieve the goal
     public class EmailService : IMessageService
     {
@@ -17,6 +21,10 @@ namespace WithDIP
         }
     }
 
+
+
+
+
     //  Low Level Code | Details | Methods to achieve the goal
     public class SmsService : IMessageService
     {
@@ -25,6 +33,10 @@ namespace WithDIP
             Console.WriteLine("SMS sent: " + message);
         }
     }
+
+
+
+
 
 
     // High Level Code | Bussiness Logic | Goal
@@ -42,6 +54,10 @@ namespace WithDIP
             _service.Send("Hello from Notification");
         }
     }
+
+
+
+
 
     class Program
     {

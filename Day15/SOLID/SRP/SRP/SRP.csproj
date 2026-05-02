@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>WithISP.Program</StartupObject>
+    <StartupObject>WithoutSRP.ProgramWithoutSRP</StartupObject>
   </PropertyGroup>
 
 </Project>
