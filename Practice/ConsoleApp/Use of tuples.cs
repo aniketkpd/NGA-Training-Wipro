@@ -5,7 +5,7 @@ namespace practice
 
 { 
 
-    class Program7
+    class use_of_tuples
     {
         static (int area, int perimeter) rectangle(int length, int breadth)
         {

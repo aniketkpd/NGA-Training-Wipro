@@ -3,7 +3,7 @@ using System;
 namespace practice
 { 
 
-    class Program6
+    class anonymous_lambda_functions
     {
         delegate void mydel(int x);
         static void Main()

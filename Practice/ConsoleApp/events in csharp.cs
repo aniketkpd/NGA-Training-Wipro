@@ -2,7 +2,7 @@
 using System;
 namespace
 {
-    class Program3
+    class eventsincsharp
     {
         //Delegate here - before main and outside main
         delegate void mydel();

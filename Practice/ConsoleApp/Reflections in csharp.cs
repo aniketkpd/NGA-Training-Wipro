@@ -5,7 +5,7 @@ using System.Reflection;
 namespace practice
 { 
 
-    class Program4
+    class ReflectionsInCsharp
     {
         static void Main()
         {

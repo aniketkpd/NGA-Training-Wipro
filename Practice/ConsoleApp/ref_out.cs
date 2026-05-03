@@ -2,7 +2,7 @@
 using System;
 namespace Practice
 { 
-    class Program5
+    class ref_out
     {
         static void GetNumUsingOut(out int a)
         {

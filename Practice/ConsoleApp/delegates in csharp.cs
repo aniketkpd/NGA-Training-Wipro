@@ -4,7 +4,7 @@ using System;
 
 namespace practice
 { 
-    class Program1
+    class delegatesinCsharp
     {
         //Delegate here - before main and outside main
         delegate void mydel();

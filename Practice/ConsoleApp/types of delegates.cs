@@ -3,7 +3,7 @@ using System;
 namespace practice
 {
 
-    class Program2
+    class typesofdelegates
     {
         //Delegate here - before main and outside main
         delegate void mydel();
