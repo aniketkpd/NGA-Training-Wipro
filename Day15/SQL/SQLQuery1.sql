@@ -84,3 +84,29 @@ WHERE E.Salary >
 
 
 
+ CREATE TRIGGER trg_UpdateDepartmentLocation
+ON Employees
+AFTER INSERT
+AS
+BEGIN
+    UPDATE D
+    SET D.Location = 'Updated Location'
+    FROM Departments D
+    JOIN inserted I ON D.DeptName = I.Department
+END;
+
+
+
+
+
+
+
+GO
+
+
+
+
+
+--2) Insert a new employee to test the trigger
+INSERT INTO dbo.Employees (EmpID, FirstName, LastName, Department, Salary)
+VALUES (10, 'John', 'Snow', 'IT', 50000);
