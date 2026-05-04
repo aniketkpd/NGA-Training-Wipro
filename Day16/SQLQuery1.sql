@@ -50,6 +50,18 @@ DROP INDEX idx_salary ON NewEmployees;
 
 
 
+-- Rebuilding an index:
+ALTER INDEX idx_salary ON NewEmployees REBUILD;
+
+-- Reorganizing an index:
+ALTER INDEX idx_salary ON NewEmployees REORGANIZE;
+
+SET STATISTICS TIME ON;
+
+
+
+SET STATISTICS IO ON ;
+SET STATISTICS PROFILE ON ;
 
 
 
