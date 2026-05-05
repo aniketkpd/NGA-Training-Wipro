@@ -1,0 +1,37 @@
+﻿@page
+@model CustomerFeedbackApp.Pages.FeedbackModel
+@using CustomerFeedbackApp.Helpers
+
+<h2>Customer Feedback</h2>
+
+<form method="post">
+
+    <div>
+        <label>Name</label>
+        @Html.TextBoxFor(m => m.UserFeedback.Name)
+    </div>
+
+    <div>
+        <label>Email</label>
+        @Html.TextBoxFor(m => m.UserFeedback.Email)
+    </div>
+
+    <div>
+        <label>Rating</label>
+        <rating-stars max="5"></rating-stars>
+    </div>
+
+    <div>
+        <label>Comments</label>
+        @Html.TextAreaFor(m => m.UserFeedback.Comments)
+    </div>
+
+    <div>
+        <label>Custom Styled Input</label>
+        @Html.StyledInput("ExtraField", "Enter extra info")
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<a asp-page="/ViewFeedback">View Feedback</a>

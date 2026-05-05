@@ -1,0 +1,44 @@
+﻿@page
+@model UserRegistrationApp.Pages.RegisterModel
+
+<h2>Register</h2>
+
+<form method="post">
+
+    <div asp-validation-summary="All"></div>
+
+    <div>
+        <label>Username</label>
+        <input asp-for="User.Username" />
+        <span asp-validation-for="User.Username"></span>
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="User.Email" />
+        <span asp-validation-for="User.Email"></span>
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input asp-for="User.Password" type="password" />
+        <span asp-validation-for="User.Password"></span>
+    </div>
+
+    <div>
+        <label>Confirm Password</label>
+        <input asp-for="User.ConfirmPassword" type="password" />
+        <span asp-validation-for="User.ConfirmPassword"></span>
+    </div>
+
+    <button type="submit">Register</button>
+</form>
+
+@if (Model.Message != null)
+{
+    <p>@Model.Message</p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

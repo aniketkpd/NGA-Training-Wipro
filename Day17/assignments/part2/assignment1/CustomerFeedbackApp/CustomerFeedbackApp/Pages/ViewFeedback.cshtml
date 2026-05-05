@@ -1,0 +1,18 @@
+﻿@page
+@using CustomerFeedbackApp.Pages
+@model FeedbackModel
+
+<h2>Submitted Feedback</h2>
+
+@foreach (var item in FeedbackModel.FeedbackList)
+{
+    <div>
+        <p><b>Name:</b> @item.Name</p>
+        <p><b>Email:</b> @item.Email</p>
+        <p><b>Rating:</b> @item.Rating</p>
+        <p><b>Comments:</b> @item.Comments</p>
+        <hr />
+    </div>
+}
+
+<a asp-page="/Feedback">Back</a>

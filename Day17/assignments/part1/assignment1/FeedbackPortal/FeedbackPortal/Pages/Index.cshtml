@@ -1,0 +1,53 @@
+﻿@page
+@model FeedbackPortal.Pages.IndexModel
+@using FeedbackPortal.Helpers
+
+<h2>Customer Feedback</h2>
+
+<form method="post">
+
+    <div>
+        <label>Name:</label>
+        @Html.TextBoxFor(m => m.UserFeedback.Name)
+    </div>
+
+    <div>
+        <label>Email:</label>
+        @Html.TextBoxFor(m => m.UserFeedback.Email)
+    </div>
+
+    <div>
+        <label>Rating (Dropdown):</label>
+        @Html.DropDownListFor(m => m.UserFeedback.Rating,
+            new SelectList(new[] { 1, 2, 3, 4, 5 }))
+    </div>
+
+    <div>
+        <label>Comments:</label>
+        @Html.TextAreaFor(m => m.UserFeedback.Comments)
+    </div>
+
+    <div>
+        <label>Star Rating (Custom TagHelper):</label>
+        <star-rating count="5"></star-rating>
+    </div>
+
+    <div>
+        <label>Custom Input (HTML Helper):</label>
+        @Html.StyledInput("customField", "Enter something...")
+    </div>
+
+    <br />
+
+    <button type="submit">Submit</button>
+
+</form>
+
+@if (Model.Message != null)
+{
+    <p>@Model.Message</p>
+}
+
+<hr />
+
+<a asp-page="/Index">Go to Home</a>
