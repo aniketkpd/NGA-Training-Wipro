@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "My Razor page";
+}
+
+<h3>GET Example</h3>
+
+<form method="get">
+    <input type="text" asp-for="SearchName" placeholder="Enter name" />
+    <button type="submit">Search</button>
+</form>
+
+<p> You have searched for: @Model.SearchName </p>
+
+
+<h3>POST Example </h3>
+
+<form method="post">
+    <input type="text" asp-for="Name" placeholder="Enter name" />
+    <button type="submit">Submit</button>
+</form>
+
+<p> You submitted: @Model.Name</p>
+
+
+
+
+
+
+
