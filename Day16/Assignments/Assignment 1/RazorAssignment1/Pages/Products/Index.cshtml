@@ -1,0 +1,36 @@
+@page
+@model RazorAssignment1.Pages.Products.IndexModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>Products</h1>
+
+<form method="post">
+    <h2>Add Product</h2>
+
+    <label asp-for="Product.Name"></label>
+    <input asp-for="Product.Name" />
+
+    <label asp-for="Product.Description"></label>
+    <textarea asp-for="Product.Description"></textarea>
+
+    <h3>Categories</h3>
+
+    <label>Category 1</label>
+    <input asp-for="Product.Categories[0].Name" />
+
+    <label>Category 2</label>
+    <input asp-for="Product.Categories[1].Name" />
+
+    <button type="submit">Add Product</button>
+</form>
+
+<hr />
+
+<h2>Product List</h2>
+
+@foreach (var product in Model.Products)
+{
+    <partial name="_ProductSummary" model="product" />
+}

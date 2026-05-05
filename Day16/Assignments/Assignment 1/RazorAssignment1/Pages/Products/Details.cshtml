@@ -1,0 +1,29 @@
+@page "{id:int}"
+@model RazorAssignment1.Pages.Products.DetailsModel
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+@if (Model.Product == null)
+{
+    <h1>Product not found</h1>
+}
+else
+{
+    <h1>@Model.Product.Name</h1>
+    <p>@Model.Product.Description</p>
+
+    <h2>Categories</h2>
+    <ul>
+        @foreach (var category in Model.Product.Categories)
+        {
+            <li>
+                <a asp-page="/Products/Category" asp-route-categoryName="@category.Name">@category.Name</a>
+            </li>
+        }
+    </ul>
+}
+
+<p>
+    <a asp-page="/Products/Index">Back to Products</a>
+</p>

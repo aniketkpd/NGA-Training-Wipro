@@ -1,0 +1,16 @@
+@model Product
+
+<div class="product">
+    <h3>
+        <a asp-page="/Products/Details" asp-route-id="@Model.ProductID">@Model.Name</a>
+    </h3>
+
+    <p>@Model.Description</p>
+
+    <div class="categories">
+        @foreach (var category in Model.Categories)
+        {
+            <a asp-page="/Products/Category" asp-route-categoryName="@category.Name">@category.Name</a>
+        }
+    </div>
+</div>

@@ -1,0 +1,23 @@
+@page "{categoryName}"
+@model RazorAssignment1.Pages.Products.CategoryModel
+@{
+    ViewData["Title"] = "Category";
+}
+
+<h1>@Model.CategoryName</h1>
+
+@if (Model.Products.Count == 0)
+{
+    <p>No products found in this category.</p>
+}
+else
+{
+    @foreach (var product in Model.Products)
+    {
+        <partial name="_ProductSummary" model="product" />
+    }
+}
+
+<p>
+    <a asp-page="/Products/Index">Back to Products</a>
+</p>

@@ -1,0 +1,19 @@
+@model Person
+@{
+    ViewData["Title"] = "Submitted Data";
+}
+
+<h1>Submitted Data</h1>
+
+<div class="result">
+    <p><strong>First Name:</strong> @Model.FirstName</p>
+    <p><strong>Last Name:</strong> @Model.LastName</p>
+    <p><strong>Age:</strong> @Model.Age</p>
+    <p><strong>Street:</strong> @Model.Address.Street</p>
+    <p><strong>City:</strong> @Model.Address.City</p>
+    <p><strong>Zip Code:</strong> @Model.Address.ZipCode</p>
+</div>
+
+<p>
+    <a asp-controller="Person" asp-action="Create">Back to Form</a>
+</p>
