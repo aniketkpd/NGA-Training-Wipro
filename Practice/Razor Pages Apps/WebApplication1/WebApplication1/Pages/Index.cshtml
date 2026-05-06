@@ -1,0 +1,50 @@
+﻿@page
+@model WebApplication1.Pages.IndexModel
+
+
+@* to access the name and email property *@
+//direct property call | 1 way binding<br />
+Name: @Model.Name          <br /> <br />
+//getting via OnGet()       <br />
+Email: @Model.Email        <br /> <br />
+
+
+Same values filled inside asp-for="" of input
+
+<form method="post" style="border:2px solid red; padding:20px; border-radius:15px;">
+    <h2>Student Form</h2> <br />
+    <label for="name">Name:</label>
+    <input type="text" asp-for="@Model.Name" /> <br />
+
+    <label for="email">Email:</label>
+    <input type="email" asp-for="@Model.Email" /> <br /> <br />
+
+    <input type="submit" value="Submit" />
+</form>
+
+<br /> <br />
+
+
+Change values in form and get those values in here via OnPost()
+After submit, Message from server will be shown here:
+<br/>
+
+//2-way binding <br />
+@Model.Message
+
+
+
+
+
+
+
+
+
+@* Writing this in Razor *@
+@* <input asp-for="StudentName" /> *@
+
+@* Automatically generates this *@
+@* <input type="text"
+       id="StudentName"
+       name="StudentName" 
+       value = "StudentName">*@
