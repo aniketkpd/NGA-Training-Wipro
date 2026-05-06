@@ -1,0 +1,38 @@
+﻿@page
+@model feedbackPortal.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Employee Feedback Portal created using Razor pages in ASP.NET Core Web App</h2>
+
+<p>
+    <b>Employee Name:</b> @Model.EmployeeName
+</p>
+
+<form method="post">
+
+    <label>Enter feedback here !!</label>
+    <br />
+
+    <textarea asp-for="Feedback"></textarea>
+    <br />
+
+    <span asp-validation-for="Feedback" style="color:red"></span>
+
+    <br />
+
+    <button type="submit">Submit</button>
+
+</form>
+
+@if (Model.Message != null)
+{
+    <p style="color:green">@Model.Message</p>
+}
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
