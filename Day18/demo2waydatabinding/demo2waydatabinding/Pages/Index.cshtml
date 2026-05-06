@@ -1,0 +1,15 @@
+﻿@page
+@model demo2waydatabinding.Pages.IndexModel
+
+<h1>Student Form</h1>
+
+<div>
+    <form method="post">
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="studentName" asp-for="StudentName" />
+        <button type="submit">Submit</button>
+    </form>
+    <p>@Model.Message</p>
+</div>
+
+
