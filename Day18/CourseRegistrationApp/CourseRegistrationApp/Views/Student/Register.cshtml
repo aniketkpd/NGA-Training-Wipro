@@ -1,0 +1,31 @@
+﻿@model Student
+@* giving reference of model student class  *@
+
+<h2> Course Registeration page </h2>
+
+<form asp-action="Register" method="post">
+    <label>Name:</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name" style="color:red"></span>
+
+    <br />
+
+    <label>Email:</label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email" style="color:red"></span>
+    <br />
+
+    <label>Age:</label>
+    <input asp-for="Age" />
+    <span asp-validation-for="Age" style="color:red"></span>
+    <br />
+
+    <button type="submit">
+        Submit
+    </button>
+</form>
+@* checking if view bag is defined and same message can be displayed  *@
+@if (ViewBag.Message != null)
+{
+    <p style="color:green">@ViewBag.Message</p>
+}
