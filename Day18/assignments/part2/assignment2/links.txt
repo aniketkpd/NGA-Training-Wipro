@@ -1,0 +1,6 @@
+Authorization Filter
+/Account/Admin
+
+
+Error Handling Filter
+/Account/ErrorTest

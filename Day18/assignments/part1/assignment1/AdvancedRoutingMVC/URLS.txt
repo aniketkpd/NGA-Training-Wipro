@@ -1,0 +1,11 @@
+URLS:
+
+https://localhost:xxxx/Products/Electronics/10
+
+https://localhost:xxxx/Users/Aniket/Orders
+
+https://localhost:xxxx/Dashboard/admin
+
+https://localhost:xxxx/Dashboard/user
+
+https://localhost:xxxx/Products/Guid/6F9619FF-8B86-D011-B42D-00CF4FC964FF
