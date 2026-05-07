@@ -20,8 +20,19 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Student}/{action=Register}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Student}/{action=Register}/{id?}");
+
+app.MapControllerRoute(
+    name: "custom",
+    pattern: "register-course",
+    defaults: new { controller = "Student", action = "Register" });
 
 app.Run();
