@@ -36,4 +36,4 @@ app.MapControllerRoute(
     defaults: new { controller = "Student", action = "Register" });
 
 app.Run();
-  
+     
