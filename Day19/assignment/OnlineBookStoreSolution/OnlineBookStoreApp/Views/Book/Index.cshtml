@@ -1,0 +1,16 @@
+﻿@model List<OnlineBookStoreApp.Models.Book>
+
+<h2>Books List</h2>
+
+@foreach (var item in Model)
+{
+    <div>
+        <h3>@item.Title</h3>
+
+        <a asp-controller="Book"
+               asp-action="Details"
+               asp-route-id="@item.Id">
+            View Details
+        </a>
+    </div>
+}

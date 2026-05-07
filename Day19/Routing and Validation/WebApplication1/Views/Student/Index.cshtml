@@ -1,0 +1,35 @@
+﻿@model WebApplication1.Models.StudentModel
+
+@{
+    Layout = null;
+}
+
+
+//1 way data binding - data coming from model itself <br />
+Name: @Model.Name  <br />
+Age: @Model.Age   <br /> <br />
+
+
+<form method="post">
+    <h2>Student Form (with validation check)</h2>
+    <label>Name:</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span> 
+
+    <br />
+
+    <label>Age:</label>
+    <input asp-for="Age" />
+    <span asp-validation-for="Age"></span>
+
+    <br />
+
+    <button type="submit">Submit</button>
+</form>
+
+//2 way data binding
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+
