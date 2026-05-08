@@ -1,0 +1,1 @@
+Understanding how controller and view work together.

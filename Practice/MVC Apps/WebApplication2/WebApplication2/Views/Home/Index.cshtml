@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+Go to <a asp-controller="Methods" asp-action="Method1">Method1</a> <br />
+Go to <a asp-controller="Methods" asp-action="Method2">Method2</a> <br />
+Go to <a asp-controller="Methods" asp-action="Method3">Method3</a> <br />
+
+Because we changed the view in controller now method 4 will open method 5 and vice versa. <br />
+Go to <a asp-controller="Methods" asp-action="Method4">Method4</a> (this will open Method5)<br />
+Go to <a asp-controller="Methods" asp-action="Method5">Method5</a> (this will open Method4)<br />
