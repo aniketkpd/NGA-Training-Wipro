@@ -1,0 +1,3 @@
+Login Page: /account/login
+Dashboard After Login: /account/dashboard
+Exam Page: /exam/startexam

@@ -1,0 +1,12 @@
+﻿@model string[]
+
+@{
+    Layout = null;
+}
+
+<h1>All Messages</h1>
+
+@foreach (var item in Model)
+{
+    <p>@item</p>
+}
