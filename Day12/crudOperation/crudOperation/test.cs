@@ -11,6 +11,7 @@ class Test
         {
             conn.Open();
             Console.WriteLine("Connected!");
+            conn.Close();
         }
     }
 }

@@ -1,0 +1,11 @@
+USE NFSDB;
+
+GO
+
+CREATE TABLE Students
+(
+    Id INT PRIMARY KEY IDENTITY,
+    Name VARCHAR(50),
+    Age INT
+)
+
