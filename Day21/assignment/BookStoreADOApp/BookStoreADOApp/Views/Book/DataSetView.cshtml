@@ -1,0 +1,32 @@
+@model System.Data.DataTable
+
+@{
+    ViewData["Title"] = "Books DataSet";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3 mb-0">Books from DataSet</h1>
+    <a class="btn btn-outline-secondary" asp-action="Index">Back to Books</a>
+</div>
+
+<table class="table table-bordered table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (System.Data.DataRow row in Model.Rows)
+        {
+            <tr>
+                <td>@row["Id"]</td>
+                <td>@row["Title"]</td>
+                <td>@row["AuthorName"]</td>
+                <td>@Convert.ToDecimal(row["Price"]).ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
