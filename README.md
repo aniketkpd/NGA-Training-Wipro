@@ -56,7 +56,7 @@ NGA-Training-Wipro/
 ├── Day10/           # Delegates + Reflections + Unit Testing
 ├── Day11/           # SQL Principles & Design Patterns
 ├── Day12/           # SQL Variables, Keys & Constraints
-├── Practice/        # Extra practice exercises & mini-projects
 ...
+├── Practice/        # Extra practice exercises & mini-projects
 ├── README.md
 └── Wipro NGA 
