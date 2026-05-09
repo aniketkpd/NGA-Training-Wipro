@@ -51,6 +51,11 @@ namespace WebApplication1.Controllers
         {
             string path = "messages.txt";
 
+            if (!System.IO.File.Exists(path))
+            {
+                return View(new string[0]);
+            }
+
             string[] messages = System.IO.File.ReadAllLines(path);
 
             return View(messages);

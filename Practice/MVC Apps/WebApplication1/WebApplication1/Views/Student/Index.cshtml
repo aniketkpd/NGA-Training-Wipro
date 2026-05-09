@@ -1,0 +1,44 @@
+﻿@model WebApplication1.Models.StudentModel
+
+@{
+    Layout = null;
+}
+
+
+// 1 way data binding (Server -> Client) <br />
+@Model.Name <br />
+@Model.Age <br /> <br />
+
+
+
+
+// 1 way data binding (Client -> Server) <br />
+<form  method="post">
+    <label for="Name">Name:</label> 
+    <input asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span> <br />
+
+    <label for="Age">Age:</label>
+    <input asp-for="Age" />
+    <span asp-validation-for="Age" class="text-danger"></span> <br />
+    
+    <input type="submit" value="Submit" />
+</form> 
+
+
+//2 way binding (Client -> server -> client) <br />
+
+@if(ViewBag.Message != null)
+{
+    @ViewBag.Message;
+}
+
+
+
+
+// 2 way data binding (Server -> Client)
+<br />
+@Model.Name
+<br />
+@Model.Age<br />
+<br />
