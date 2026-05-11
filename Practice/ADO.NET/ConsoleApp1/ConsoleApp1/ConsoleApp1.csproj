@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>ConsoleApp1.Program3</StartupObject>
+    <StartupObject>table_show_data</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

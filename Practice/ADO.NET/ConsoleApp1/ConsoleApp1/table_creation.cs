@@ -28,7 +28,7 @@ namespace ConsoleApp1
             //Execute your database operations here
 
             // creating a table in the database
-            string createTableQuery = "CREATE TABLE Employees (Id INT PRIMARY KEY, Name NVARCHAR(50), Age INT)";
+            string createTableQuery = "CREATE TABLE Employees (Id INT PRIMARY KEY, Name VARCHAR(50), Age INT)";
 
 
             // creating a SqlCommand object to execute the query
