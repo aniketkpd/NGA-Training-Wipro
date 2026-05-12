@@ -22,7 +22,7 @@ namespace WebApplication1.Pages
             Email = "myemail@example.com";
         }
 
-
+        // this method is called when user submits the form
         public void OnPost() 
         {
             Message = $"Hello {Name}, your email is {Email}";
