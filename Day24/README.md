@@ -1,3 +1,7 @@
+# EF Core Notes
+
+## Important
+
 1. Must update System.Security.Cryptography.Xml in nugget package manager
 
 2. Installing these will create version mismatch issue
