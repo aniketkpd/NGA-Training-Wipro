@@ -1,0 +1,28 @@
+CREATE TABLE Authors (
+    AuthorId INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name TEXT NOT NULL,
+    Bio TEXT NULL
+);
+
+CREATE TABLE Books (
+    BookId INTEGER PRIMARY KEY AUTOINCREMENT,
+    Title TEXT NOT NULL,
+    AuthorId INTEGER NOT NULL,
+    CONSTRAINT FK_Books_Authors_AuthorId
+        FOREIGN KEY (AuthorId) REFERENCES Authors (AuthorId)
+);
+
+CREATE TABLE Genres (
+    GenreId INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE BookGenres (
+    BookId INTEGER NOT NULL,
+    GenreId INTEGER NOT NULL,
+    PRIMARY KEY (BookId, GenreId),
+    CONSTRAINT FK_BookGenres_Books_BookId
+        FOREIGN KEY (BookId) REFERENCES Books (BookId) ON DELETE CASCADE,
+    CONSTRAINT FK_BookGenres_Genres_GenreId
+        FOREIGN KEY (GenreId) REFERENCES Genres (GenreId) ON DELETE CASCADE
+);

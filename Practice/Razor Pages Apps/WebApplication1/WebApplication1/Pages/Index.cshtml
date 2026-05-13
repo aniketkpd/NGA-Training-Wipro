@@ -13,10 +13,10 @@ Same values filled inside asp-for="" of input
 
 <form method="post" style="border:2px solid red; padding:20px; border-radius:15px;">
     <h2>Student Form</h2> <br />
-    <label for="name">Name:</label>
+    <label asp-for="Name">Name:</label>
     <input asp-for="@Model.Name" /> <br />
 
-    <label for="email">Email:</label>
+    <label asp-for="Email">Email:</label>
     <input asp-for="@Model.Email" /> <br /> <br />
 
     <input type="submit" value="Submit" />

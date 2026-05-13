@@ -1,0 +1,33 @@
+@LibraryManagementSystem_HostAddress = http://localhost:5000
+
+POST {{LibraryManagementSystem_HostAddress}}/api/authors
+Content-Type: application/json
+
+{
+  "name": "Jane Austen",
+  "bio": "English novelist"
+}
+
+###
+
+POST {{LibraryManagementSystem_HostAddress}}/api/genres
+Content-Type: application/json
+
+{
+  "name": "Classic"
+}
+
+###
+
+POST {{LibraryManagementSystem_HostAddress}}/api/books
+Content-Type: application/json
+
+{
+  "title": "Pride and Prejudice",
+  "authorId": 1,
+  "genreIds": [1]
+}
+
+###
+
+GET {{LibraryManagementSystem_HostAddress}}/api/books/with-author-and-genres
