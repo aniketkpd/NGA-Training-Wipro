@@ -1,0 +1,1 @@
+CREATE DATABASE SmartMartDB;GOUSE SmartMartDB;GOCREATE TABLE Products(    ProductId INT PRIMARY KEY IDENTITY(1,1),    ProductName VARCHAR(100),    Price DECIMAL(10,2),    Quantity INT);INSERT INTO Products(ProductName, Price, Quantity)VALUES('Laptop', 75000, 10),('Mouse', 500, 50),('Keyboard', 1500, 30);Select * from products;
