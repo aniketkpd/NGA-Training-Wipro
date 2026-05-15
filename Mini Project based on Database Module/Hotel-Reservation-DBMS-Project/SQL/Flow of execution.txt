@@ -1,0 +1,32 @@
+Execute them in this order:
+
+1. `ddl_scripts.sql`
+   Creates database objects:
+
+   * tables
+   * constraints
+   * keys
+
+2. `dml_scripts.sql`
+   Inserts sample data.
+
+3. `functions.sql`
+   Creates scalar/table functions.
+
+4. `views.sql`
+   Creates views.
+
+5. `triggers.sql`
+   Creates triggers.
+
+6. `indexes.sql`
+   Creates indexes after tables/data exist.
+
+7. `queries.sql`
+   Run all practice queries and reports.
+
+8. `transactions_dcl_demo.sql`
+   Run transaction demos, rollback demos, DCL etc.
+
+9. `drop_truncate_demo.sql`
+
