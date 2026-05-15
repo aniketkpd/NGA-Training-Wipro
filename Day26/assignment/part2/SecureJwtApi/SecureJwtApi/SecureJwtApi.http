@@ -1,0 +1,50 @@
+@host = http://localhost:5132
+@token = REPLACE_WITH_JWT
+
+### Health
+GET {{host}}/health
+
+### Security assessment checklist (SDLC)
+GET {{host}}/api/security/assessment-checklist
+
+### Login — admin
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "Admin@123"
+}
+
+### Login — user
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "User@123"
+}
+
+### Register new user
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "newuser1",
+  "password": "SecurePass1!",
+  "email": "new@example.com",
+  "fullName": "New User",
+  "financialAccount": "1234-5678-9012"
+}
+
+### Profile (requires Bearer token)
+GET {{host}}/api/users/profile
+Authorization: Bearer {{token}}
+
+### Admin — list users
+GET {{host}}/api/admin/users
+Authorization: Bearer {{token}}
+
+### Admin — audit logs
+GET {{host}}/api/admin/audit-logs?take=20
+Authorization: Bearer {{token}}

@@ -1,0 +1,34 @@
+Secure Development Standards — SecureJwtApi (SDLC / User Story 2 & 5)
+======================================================================
+
+1. Database access
+   - Use Entity Framework Core only; no raw SQL concatenation from user input.
+   - Connection strings in User Secrets, environment variables, or Azure Key Vault / AWS Secrets Manager.
+
+2. Authentication & passwords
+   - BCrypt (work factor 12) for password hashing; never log or return password fields.
+   - JWT for API authentication; role claims for RBAC (Admin, User).
+
+3. Sensitive data
+   - AES-256-GCM column encryption for email, full name, and financial account in the database.
+   - HMAC-SHA256 for integrity verification of sensitive field sets.
+   - Mask financial account in API responses where full value is not required.
+
+4. Transport security
+   - HTTPS for the API; SQL connection Encrypt=True (TLS to database).
+
+5. Input / output
+   - Data annotations on all request models; ValidationProblem for invalid input.
+   - JSON responses only; security headers middleware for XSS/clickjacking mitigation.
+
+6. Auditing
+   - SecurityAuditLogs for login, register, and admin actions (no secrets in Details).
+
+7. Testing & reviews
+   - Run Microsoft.CodeAnalysis.NetAnalyzers on build.
+   - Follow checklist at GET /api/security/assessment-checklist before deployment.
+   - Perform penetration tests (SQLi, XSS, broken access control) per assignment.
+
+8. Vulnerability management
+   - Remediate findings from assessments before production deployment.
+   - Keep NuGet packages updated via dotnet list package --outdated.

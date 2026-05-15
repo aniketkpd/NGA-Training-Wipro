@@ -1,0 +1,39 @@
+@model IEnumerable<StudentRepositoryDemo.Models.Student>
+
+@{
+    ViewData["Title"] = "Student List";
+}
+
+<h2>Student List</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add Student</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Age</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.StudentId</td>
+                <td>@item.Name</td>
+                <td>@item.Course</td>
+                <td>@item.Age</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.StudentId">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@item.StudentId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.StudentId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
