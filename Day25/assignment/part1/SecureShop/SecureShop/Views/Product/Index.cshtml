@@ -1,0 +1,14 @@
+﻿@model List<SecureShop.Models.Product>
+
+<h2>Products</h2>
+
+@foreach (var item in Model)
+{
+    <div>
+        <h3>@item.Name</h3>
+        <p>@item.Description</p>
+        <p>@item.Price</p>
+    </div>
+}
+
+<a href="/Account/Logout">Logout</a>

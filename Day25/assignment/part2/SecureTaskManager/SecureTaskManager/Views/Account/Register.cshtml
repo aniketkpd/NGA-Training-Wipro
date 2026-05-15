@@ -1,0 +1,25 @@
+﻿@model SecureTaskManager.Models.RegisterViewModel
+
+<h2>Register</h2>
+
+<form method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All"></div>
+
+    <input asp-for="Username" placeholder="Username" />
+
+    <br />
+
+    <input asp-for="Email" placeholder="Email" />
+
+    <br />
+
+    <input asp-for="Password" type="password" placeholder="Password" />
+
+    <br />
+
+    <button type="submit">Register</button>
+
+</form>

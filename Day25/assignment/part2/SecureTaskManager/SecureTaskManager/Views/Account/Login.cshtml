@@ -1,0 +1,21 @@
+﻿@model SecureTaskManager.Models.LoginViewModel
+
+<h2>Login</h2>
+
+<form method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All"></div>
+
+    <input asp-for="Username" placeholder="Username" />
+
+    <br />
+
+    <input asp-for="Password" type="password" placeholder="Password" />
+
+    <br />
+
+    <button type="submit">Login</button>
+
+</form>

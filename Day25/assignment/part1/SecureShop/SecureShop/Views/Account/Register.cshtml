@@ -1,0 +1,22 @@
+﻿@model SecureShop.Models.RegisterViewModel
+
+<h2>Register</h2>
+
+<form method="post">
+    <input asp-for="Username" placeholder="Username" />
+    <span asp-validation-for="Username"></span>
+
+    <br />
+
+    <input asp-for="Email" placeholder="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <br />
+
+    <input asp-for="Password" placeholder="Password" />
+    <span asp-validation-for="Password"></span>
+
+    <br />
+
+    <button type="submit">Register</button>
+</form>

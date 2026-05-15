@@ -1,0 +1,13 @@
+﻿@model List<SecureTaskManager.Models.TaskItem>
+
+<h2>Tasks</h2>
+
+@foreach (var item in Model)
+{
+    <div>
+        <h3>@item.Title</h3>
+        <p>@item.Description</p>
+    </div>
+}
+
+<a href="/Account/Logout">Logout</a>
