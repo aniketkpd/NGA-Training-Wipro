@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Simple AJAX Example</h2>
+
+<button id="btnClick">Get Message</button>
+
+<h3 id="result"></h3>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        $("#btnClick").click(function () {
+
+            $.ajax({
+                url: '/Home/GetMessage',
+                type: 'GET',
+                success: function (response) {
+
+                    $("#result").html(response.message);
+
+                },
+                error: function () {
+
+                    alert("Error occurred");
+
+                }
+            });
+
+        });
+
+    });
+</script>
