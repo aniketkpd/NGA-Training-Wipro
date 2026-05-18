@@ -11,10 +11,10 @@ namespace WebApplication2.Controllers
         }
 
 
+         
 
 
-
-        [HttpGet]
+        [HttpGet] 
         public JsonResult GetStudentById(int id)
         {
             List<Student> students = new List<Student>()
