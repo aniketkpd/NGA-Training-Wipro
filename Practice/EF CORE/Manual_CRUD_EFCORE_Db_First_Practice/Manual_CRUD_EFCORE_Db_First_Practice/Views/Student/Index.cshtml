@@ -1,0 +1,55 @@
+﻿@model List<Manual_CRUD_EFCORE_Db_First_Practice.Models.Student>
+
+<h1>Students</h1>
+
+<form method="post" asp-action="Create">
+
+    <input type="text" name="Name" placeholder="Enter Name" />
+
+    <input type="text" name="Branch" placeholder="Enter Branch" />
+
+    <input type="number" name="Rollno" placeholder="Enter Roll Number" />
+
+    <input type="email" name="Email" placeholder="Enter Email" />
+
+    <button type="submit">Add Student</button>
+
+</form>
+
+<br />
+
+<table border="1">
+
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Roll No</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Branch</td>
+            <td>@item.Rollno</td>
+            <td>@item.Email</td>
+
+            <td>
+
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+
+                |
+
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+            </td>
+
+        </tr>
+    }
+
+</table>
