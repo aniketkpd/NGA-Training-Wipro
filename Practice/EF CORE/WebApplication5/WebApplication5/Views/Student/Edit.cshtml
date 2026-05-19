@@ -1,0 +1,28 @@
+﻿@model StudentModel
+
+<h2>Edit Student</h2>
+
+<form method="post" action="/Student/Update">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <input type="text" name="Name" value="@Model.Name" />
+
+    <br />
+    <br />
+
+    <input type="text" name="Branch" value="@Model.Branch" />
+
+    <br />
+    <br />
+
+    <input type="number" name="RollNumber" value="@Model.RollNumber" />
+
+    <br />
+    <br />
+
+    <button type="submit">
+        Update
+    </button>
+
+</form>

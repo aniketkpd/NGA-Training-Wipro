@@ -1,0 +1,67 @@
+﻿@model List<StudentModel>
+
+<h2>Students</h2>
+
+<form method="post" action="/Student/Create">
+
+    <input type="text" name="Name" placeholder="Enter Name" />
+
+    <br />
+    <br />
+
+    <input type="text" name="Branch" placeholder="Enter Branch" />
+
+    <br />
+    <br />
+
+    <input type="number" name="RollNumber" placeholder="Enter Roll Number" />
+
+    <br />
+    <br />
+
+    <button type="submit">
+        Add Student
+    </button>
+
+</form>
+
+<br />
+<br />
+
+<table border="1">
+
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Roll Number</th>
+        <th>Delete</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.Id</td>
+
+            <td>@item.Name</td>
+
+            <td>@item.Branch</td>
+
+            <td>@item.RollNumber</td>
+
+            <td>
+                <a href="/Student/Delete/@item.Id">
+                    Delete
+                </a>
+            </td>
+            <td>
+                <a href="/Student/Edit/@item.Id">
+                    Edit
+                </a>
+            </td>
+
+        </tr>
+    }
+
+</table>
