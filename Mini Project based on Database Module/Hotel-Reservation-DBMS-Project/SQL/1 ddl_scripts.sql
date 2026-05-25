@@ -1,10 +1,12 @@
 -- Create the database if it doesn't exist
 IF DB_ID('HotelReservationDB') IS NULL
     CREATE DATABASE HotelReservationDB;
+
 GO
 
 -- Connect to the database
 USE HotelReservationDB;
+
 GO
 
 -- Drop existing tables if they exist
@@ -20,6 +22,7 @@ IF OBJECT_ID('dbo.RoomCategory', 'U') IS NOT NULL DROP TABLE dbo.RoomCategory;
 IF OBJECT_ID('dbo.Staff', 'U') IS NOT NULL DROP TABLE dbo.Staff;
 IF OBJECT_ID('dbo.Customer', 'U') IS NOT NULL DROP TABLE dbo.Customer;
 IF OBJECT_ID('dbo.Hotel', 'U') IS NOT NULL DROP TABLE dbo.Hotel;
+
 GO
 
 
@@ -44,7 +47,6 @@ CREATE TABLE dbo.RoomCategory (
     Capacity INT NOT NULL CONSTRAINT CK_RoomCategory_Capacity CHECK (Capacity BETWEEN 1 AND 6),
     Description VARCHAR(200) NULL
 );
-
 
 
 
@@ -77,7 +79,7 @@ CREATE TABLE dbo.Customer (
 );
 
 
-
+-- Staff table to store staff details
 CREATE TABLE dbo.Staff (
     StaffID INT IDENTITY(1,1) CONSTRAINT PK_Staff PRIMARY KEY,
     FullName VARCHAR(100) NOT NULL,
@@ -87,6 +89,8 @@ CREATE TABLE dbo.Staff (
     IsActive BIT NOT NULL CONSTRAINT DF_Staff_IsActive DEFAULT (1)
 );
 
+
+-- Reservation table to store reservation details
 CREATE TABLE dbo.Reservation (
     ReservationID INT IDENTITY(1,1) CONSTRAINT PK_Reservation PRIMARY KEY,
     CustomerID INT NOT NULL,
@@ -103,6 +107,8 @@ CREATE TABLE dbo.Reservation (
     CONSTRAINT FK_Reservation_Staff FOREIGN KEY (StaffID) REFERENCES dbo.Staff(StaffID)
 );
 
+
+-- ReservationRoom table to link reservations with rooms and store the assigned rates
 CREATE TABLE dbo.ReservationRoom (
     ReservationRoomID INT IDENTITY(1,1) CONSTRAINT PK_ReservationRoom PRIMARY KEY,
     ReservationID INT NOT NULL,
@@ -113,6 +119,8 @@ CREATE TABLE dbo.ReservationRoom (
     CONSTRAINT FK_ReservationRoom_Room FOREIGN KEY (RoomID) REFERENCES dbo.Room(RoomID)
 );
 
+
+-- Service table to store additional services offered by the hotel
 CREATE TABLE dbo.Service (
     ServiceID INT IDENTITY(1,1) CONSTRAINT PK_Service PRIMARY KEY,
     ServiceName VARCHAR(80) NOT NULL CONSTRAINT UQ_Service_Name UNIQUE,
@@ -120,6 +128,10 @@ CREATE TABLE dbo.Service (
     IsActive BIT NOT NULL CONSTRAINT DF_Service_IsActive DEFAULT (1)
 );
 
+
+
+
+-- ReservationService table to link reservations with additional services and store the quantity and charged price
 CREATE TABLE dbo.ReservationService (
     ReservationServiceID INT IDENTITY(1,1) CONSTRAINT PK_ReservationService PRIMARY KEY,
     ReservationID INT NOT NULL,
@@ -131,11 +143,19 @@ CREATE TABLE dbo.ReservationService (
     CONSTRAINT FK_ReservationService_Service FOREIGN KEY (ServiceID) REFERENCES dbo.Service(ServiceID)
 );
 
+
+
+
+
+-- PaymentMethod table to store different payment methods
 CREATE TABLE dbo.PaymentMethod (
     PaymentMethodID INT IDENTITY(1,1) CONSTRAINT PK_PaymentMethod PRIMARY KEY,
     MethodName VARCHAR(40) NOT NULL CONSTRAINT UQ_PaymentMethod_Name UNIQUE
 );
 
+
+
+-- Payment table to store payment details for reservations
 CREATE TABLE dbo.Payment (
     PaymentID INT IDENTITY(1,1) CONSTRAINT PK_Payment PRIMARY KEY,
     ReservationID INT NOT NULL,
@@ -149,6 +169,9 @@ CREATE TABLE dbo.Payment (
     CONSTRAINT FK_Payment_Method FOREIGN KEY (PaymentMethodID) REFERENCES dbo.PaymentMethod(PaymentMethodID)
 );
 
+
+
+-- AuditLog table to store audit logs for tracking changes in the database
 CREATE TABLE dbo.AuditLog (
     AuditLogID BIGINT IDENTITY(1,1) CONSTRAINT PK_AuditLog PRIMARY KEY,
     TableName VARCHAR(80) NOT NULL,
@@ -159,6 +182,10 @@ CREATE TABLE dbo.AuditLog (
     Description VARCHAR(400) NULL
 );
 
+
+
+
+-- Add a check constraint to ensure that email addresses in the Customer table are in a valid format
 ALTER TABLE dbo.Customer
 ADD CONSTRAINT CK_Customer_Email CHECK (Email LIKE '%_@_%._%');
-GO
+

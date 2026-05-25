@@ -99,3 +99,17 @@ INNER JOIN dbo.ReservationService rs ON s.ServiceID = rs.ServiceID
 GROUP BY s.ServiceName
 ORDER BY ServiceRevenue DESC;
 GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
