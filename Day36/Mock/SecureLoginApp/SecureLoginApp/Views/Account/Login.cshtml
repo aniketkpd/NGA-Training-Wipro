@@ -1,0 +1,29 @@
+﻿@model SecureLoginApp.Models.LoginViewModel
+
+<h2>Login</h2>
+
+<form method="post">
+
+    @Html.AntiForgeryToken()
+
+    <div>
+        <label>Username</label>
+        <input asp-for="Username" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Password</label>
+        <input asp-for="Password" type="password" />
+    </div>
+
+    <br />
+
+    <button type="submit">Login</button>
+
+</form>
+
+<br />
+
+<span>@ViewBag.Message</span>
