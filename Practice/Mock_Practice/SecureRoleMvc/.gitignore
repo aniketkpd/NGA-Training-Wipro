@@ -1,0 +1,7 @@
+bin/
+obj/
+.appdata/
+DataProtectionKeys/
+*.cookies.txt
+*.pfx
+secure-role-mvc.db*

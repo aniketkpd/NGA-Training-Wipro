@@ -1,0 +1,17 @@
+Use dotnet run
+
+
+Test Logins
+Admin:
+Add to chat
+Username: admin
+Password: Admin@123
+
+
+
+
+
+User:
+Add to chat
+Username: user1
+Password: User@123

@@ -1,0 +1,30 @@
+@model IReadOnlyCollection<SecureRoleMvc.Models.AdminUserViewModel>
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h1 class="h3">Admin Dashboard</h1>
+<p class="lead">Welcome, Admin! You have access to the Admin Dashboard.</p>
+
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Protected Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@user.Roles</td>
+                <td><code>@user.ProtectedUserId</code></td>
+            </tr>
+        }
+    </tbody>
+</table>
