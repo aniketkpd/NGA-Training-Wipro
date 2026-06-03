@@ -1,0 +1,68 @@
+<div class="portal-wrapper" @pageEnter>
+
+  <header class="portal-header">
+    <div class="header-content">
+      <div class="logo-area">
+        <span class="logo-icon">🎫</span>
+        <div>
+          <h1 class="portal-title">EventHub Portal</h1>
+          <p class="portal-subtitle">Discover. Attend. Experience.</p>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span>{{ events.length }} Upcoming Events</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="portal-main">
+
+    <div class="section-header">
+      <h2 class="section-title">Upcoming Events</h2>
+      <p class="section-hint">
+        <span class="premium-dot"></span>
+        Events with gold highlight are <strong>Premium</strong> (ticket price above ₹2,000)
+      </p>
+    </div>
+
+    <div class="table-container">
+      <table class="events-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Event Name</th>
+            <th>Date</th>
+            <th>Ticket Price</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody [@listAnimation]="events.length">
+          <tr
+            *ngFor="let event of events; let i = index"
+            [appHighlight]="event.price"
+            class="event-row"
+          >
+            <td class="row-number">{{ i + 1 }}</td>
+            <td class="event-name">
+              {{ event.name }}
+              <span *ngIf="isPremium(event.price)" class="premium-badge">Premium</span>
+            </td>
+            <td class="event-date">{{ event.date | date: 'dd-MMM-yyyy' }}</td>
+            <td class="event-price">{{ event.price | priceFormat }}</td>
+            <td class="event-category">
+              <span class="category-chip {{ getCategoryClass(event.category) }}">
+                {{ event.category }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <footer class="portal-footer">
+    <p>© 2025 EventHub Portal · All rights reserved</p>
+  </footer>
+
+</div>

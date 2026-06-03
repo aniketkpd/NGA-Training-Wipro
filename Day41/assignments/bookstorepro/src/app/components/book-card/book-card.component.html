@@ -1,0 +1,40 @@
+<article class="book-card">
+  <div class="book-cover">
+    <img [src]="book.coverUrl" [alt]="book.title" loading="lazy" />
+    <span class="genre-badge">{{ book.genre }}</span>
+  </div>
+
+  <div class="book-body">
+    <h3 class="book-title">{{ book.title | uppercase }}</h3>
+    <p class="book-author">by {{ book.author }}</p>
+
+    <p class="book-description">{{ book.description | slice: 0 : 100 }}...</p>
+
+    <div class="book-meta">
+      <span class="publish-date">
+        Published: {{ book.publishedDate | date: 'mediumDate' }}
+      </span>
+      <div class="rating">
+        <span
+          *ngFor="let star of starArray"
+          [class.filled]="star <= book.rating"
+          class="star"
+        >&#9733;</span>
+        <span class="rating-value">{{ book.rating }}</span>
+      </div>
+    </div>
+
+    <div class="pricing">
+      <div class="price-row">
+        <span class="label">Original:</span>
+        <span class="original-price">{{ book.price | currency: 'INR' : 'symbol' : '1.0-0' }}</span>
+      </div>
+      <div class="price-row">
+        <span class="label">Discounted ({{ discountPercent }}% off):</span>
+        <span class="discounted-price">
+          {{ book.price | discount: discountPercent | currency: 'INR' : 'symbol' : '1.0-0' }}
+        </span>
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,140 @@
+.book-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+}
+
+.book-cover {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.book-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+.genre-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #1a56db;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.book-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.book-author {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.book-description {
+  font-size: 0.83rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.book-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.publish-date {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.star {
+  color: #d1d5db;
+  font-size: 1rem;
+}
+
+.star.filled {
+  color: #f59e0b;
+}
+
+.rating-value {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-left: 6px;
+}
+
+.pricing {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.original-price {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.discounted-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #059669;
+}

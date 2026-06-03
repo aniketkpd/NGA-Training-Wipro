@@ -1,0 +1,70 @@
+<section class="books-section">
+  <div class="section-header">
+    <h2>Our Book Collection</h2>
+    <p class="subtitle">Explore our curated selection of top programming books</p>
+  </div>
+
+  <!-- Tab switcher to demonstrate both approaches -->
+  <div class="tab-bar">
+    <button
+      class="tab-btn"
+      [class.active]="activeTab === 'manual'"
+      (click)="setTab('manual')"
+    >
+      Manual Subscribe
+    </button>
+    <button
+      class="tab-btn"
+      [class.active]="activeTab === 'async'"
+      (click)="setTab('async')"
+    >
+      Async Pipe
+    </button>
+  </div>
+
+  <div class="approach-note">
+    <span *ngIf="activeTab === 'manual'" class="note manual-note">
+      Using <strong>manual subscribe()</strong> with <strong>unsubscribe()</strong> in ngOnDestroy for cleanup.
+    </span>
+    <span *ngIf="activeTab === 'async'" class="note async-note">
+      Using <strong>async pipe</strong> — Angular handles subscription and cleanup automatically.
+    </span>
+  </div>
+
+  <!-- Manual Subscribe Tab -->
+  <div *ngIf="activeTab === 'manual'">
+    <div *ngIf="loadingManual" class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading books...</p>
+    </div>
+    <div *ngIf="errorManual" class="error-state">
+      <p>{{ errorManual }}</p>
+    </div>
+    <div *ngIf="!loadingManual && !errorManual" class="books-grid">
+      <app-book-card
+        *ngFor="let book of manualBooks"
+        [book]="book"
+        [discountPercent]="discountPercent"
+      ></app-book-card>
+    </div>
+  </div>
+
+  <!-- Async Pipe Tab -->
+  <div *ngIf="activeTab === 'async'">
+    <ng-container *ngIf="books$ | async as asyncBooks; else loadingAsync">
+      <div class="books-grid">
+        <app-book-card
+          *ngFor="let book of asyncBooks"
+          [book]="book"
+          [discountPercent]="discountPercent"
+        ></app-book-card>
+      </div>
+    </ng-container>
+    <ng-template #loadingAsync>
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Loading books via async pipe...</p>
+      </div>
+    </ng-template>
+  </div>
+</section>

@@ -1,0 +1,243 @@
+.portal-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// ─── Header ────────────────────────────────────────────────────────────────
+.portal-header {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px 40px;
+
+  .header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .logo-icon {
+      font-size: 2.4rem;
+    }
+  }
+
+  .portal-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+  }
+
+  .portal-subtitle {
+    font-size: 0.85rem;
+    color: rgba(226, 232, 240, 0.6);
+    margin-top: 2px;
+    letter-spacing: 1px;
+  }
+
+  .header-badge {
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+  }
+}
+
+// ─── Main ───────────────────────────────────────────────────────────────────
+.portal-main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.section-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: rgba(226, 232, 240, 0.55);
+
+  strong { color: #ffd700; }
+}
+
+.premium-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffd700;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.7);
+}
+
+// ─── Table ──────────────────────────────────────────────────────────────────
+.table-container {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead tr {
+    background: rgba(124, 58, 237, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    th {
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: rgba(226, 232, 240, 0.7);
+      white-space: nowrap;
+    }
+  }
+
+  tbody .event-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.25s ease, transform 0.2s ease;
+    cursor: default;
+
+    &:last-child { border-bottom: none; }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.06) !important;
+      transform: translateX(4px);
+    }
+
+    td {
+      padding: 18px 20px;
+      font-size: 0.92rem;
+      color: #e2e8f0;
+      vertical-align: middle;
+    }
+  }
+}
+
+// ─── Cells ──────────────────────────────────────────────────────────────────
+.row-number {
+  color: rgba(226, 232, 240, 0.35) !important;
+  font-size: 0.8rem !important;
+  width: 40px;
+}
+
+.event-name {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.premium-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #b7791f, #ffd700);
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.event-date {
+  font-variant-numeric: tabular-nums;
+  color: rgba(226, 232, 240, 0.75) !important;
+}
+
+.event-price {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #86efac !important;
+  font-size: 0.95rem !important;
+}
+
+// ─── Category chips ──────────────────────────────────────────────────────────
+.category-chip {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+
+  &.conference {
+    background: rgba(96, 165, 250, 0.18);
+    color: #93c5fd;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+  }
+
+  &.workshop {
+    background: rgba(52, 211, 153, 0.18);
+    color: #6ee7b7;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+  }
+
+  &.concert {
+    background: rgba(251, 113, 133, 0.18);
+    color: #fda4af;
+    border: 1px solid rgba(251, 113, 133, 0.3);
+  }
+}
+
+// ─── Footer ──────────────────────────────────────────────────────────────────
+.portal-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.78rem;
+  color: rgba(226, 232, 240, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+// ─── Responsive ──────────────────────────────────────────────────────────────
+@media (max-width: 700px) {
+  .portal-header { padding: 16px 20px; }
+
+  .portal-title { font-size: 1.4rem; }
+
+  .events-table thead th:first-child,
+  .events-table tbody td:first-child { display: none; }
+
+  .events-table td, .events-table th { padding: 12px 12px; }
+}

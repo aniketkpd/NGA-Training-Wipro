@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "price": 599,
+    "publishedDate": "2008-08-01",
+    "description": "A Handbook of Agile Software Craftsmanship. Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code.",
+    "genre": "Programming",
+    "rating": 4.5,
+    "coverUrl": "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=300"
+  },
+  {
+    "id": 2,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt & David Thomas",
+    "price": 749,
+    "publishedDate": "1999-10-20",
+    "description": "Straight from the trenches, The Pragmatic Programmer cuts through the increasing specialization and technicalities of modern software development to examine the core process — thinking about, designing, coding, and debugging software.",
+    "genre": "Programming",
+    "rating": 4.7,
+    "coverUrl": "https://images.pexels.com/photos/3747468/pexels-photo-3747468.jpeg?auto=compress&cs=tinysrgb&w=300"
+  },
+  {
+    "id": 3,
+    "title": "Design Patterns",
+    "author": "Gang of Four",
+    "price": 899,
+    "publishedDate": "1994-11-10",
+    "description": "Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems.",
+    "genre": "Software Architecture",
+    "rating": 4.6,
+    "coverUrl": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=300"
+  },
+  {
+    "id": 4,
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "price": 449,
+    "publishedDate": "2015-03-05",
+    "description": "No matter how much experience you have with JavaScript, odds are you don't fully understand the language. This book dives deep into the core mechanisms of the JavaScript language and asks Why.",
+    "genre": "JavaScript",
+    "rating": 4.8,
+    "coverUrl": "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=300"
+  },
+  {
+    "id": 5,
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "price": 799,
+    "publishedDate": "2018-11-20",
+    "description": "Refactoring is about improving the design of existing code. It is the process of changing a software system in such a way that it does not alter the external behavior of the code, yet improves its internal structure.",
+    "genre": "Programming",
+    "rating": 4.4,
+    "coverUrl": "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=300"
+  },
+  {
+    "id": 6,
+    "title": "Introduction to Algorithms",
+    "author": "Cormen, Leiserson, Rivest & Stein",
+    "price": 1299,
+    "publishedDate": "2009-07-31",
+    "description": "A comprehensive introduction to the modern study of computer algorithms. It presents many algorithms and covers them in considerable depth, yet makes their design and analysis accessible to all levels of readers.",
+    "genre": "Computer Science",
+    "rating": 4.9,
+    "coverUrl": "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=300"
+  }
+]
