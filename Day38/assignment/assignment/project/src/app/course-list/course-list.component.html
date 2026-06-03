@@ -1,0 +1,27 @@
+<div class="course-list">
+  <h2 class="list-title">Available Courses</h2>
+  <p class="list-subtitle">{{ courses.length }} courses available</p>
+
+  <div class="course-cards">
+    <div
+      class="course-card"
+      *ngFor="let course of courses"
+      [class.active]="course.id === selectedCourseId"
+    >
+      <div class="card-header">
+        <!-- Property binding: bind the title as a tooltip on the badge -->
+        <span class="level-badge" [title]="course.level">{{ course.level }}</span>
+        <span class="course-id">#{{ course.id }}</span>
+      </div>
+      <h3 class="course-title">{{ course.title }}</h3>
+      <p class="course-instructor">
+        <span class="label">Instructor:</span> {{ course.instructor }}
+      </p>
+      <p class="course-duration">
+        <span class="label">Duration:</span> {{ course.duration }}
+      </p>
+      <!-- Event binding: (click) calls onViewDetails when button is clicked -->
+      <button class="btn-view" (click)="onViewDetails(course)">View Details</button>
+    </div>
+  </div>
+</div>

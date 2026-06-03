@@ -1,0 +1,37 @@
+<div class="app-shell">
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">&#127891;</span>
+        <span class="brand-name">EduLearn</span>
+      </div>
+      <p class="brand-tagline">Course Management Portal</p>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <div class="layout">
+      <!-- LEFT PANEL: Course list -->
+      <!-- Property binding: [courses] passes the courses array to CourseListComponent -->
+      <!-- Property binding: [selectedCourseId] highlights the active card -->
+      <!-- Event binding: (courseSelected) listens for emitted events from CourseListComponent -->
+      <aside class="panel panel-left">
+        <app-course-list
+          [courses]="courses"
+          [selectedCourseId]="selectedCourse?.id ?? null"
+          (courseSelected)="onCourseSelected($event)"
+        ></app-course-list>
+      </aside>
+
+      <!-- RIGHT PANEL: Course detail -->
+      <!-- Property binding: [course] passes selectedCourse to CourseDetailComponent -->
+      <!-- Event binding: (titleChanged) listens for title edits to keep list in sync -->
+      <section class="panel panel-right">
+        <app-course-detail
+          [course]="selectedCourse"
+          (titleChanged)="onTitleChanged($event)"
+        ></app-course-detail>
+      </section>
+    </div>
+  </main>
+</div>

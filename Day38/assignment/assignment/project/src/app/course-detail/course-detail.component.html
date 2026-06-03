@@ -1,0 +1,45 @@
+<div class="detail-panel">
+  <ng-container *ngIf="course; else placeholder">
+    <div class="detail-header">
+      <span class="level-badge" [title]="'Level: ' + course.level">{{ course.level }}</span>
+      <h2 class="detail-heading">Course Details</h2>
+    </div>
+
+    <!-- Two-way binding: [(ngModel)] syncs input value with course.title in real time -->
+    <div class="field-group">
+      <label class="field-label" for="courseTitleInput">Course Title (editable)</label>
+      <input
+        id="courseTitleInput"
+        class="title-input"
+        type="text"
+        [(ngModel)]="course.title"
+        (ngModelChange)="onTitleChange($event)"
+        placeholder="Enter course title"
+      />
+      <p class="live-preview">Live preview: <strong>{{ course.title }}</strong></p>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-item">
+        <span class="detail-label">Instructor</span>
+        <!-- Property binding: [textContent] bound to course.instructor -->
+        <span class="detail-value" [textContent]="course.instructor"></span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Duration</span>
+        <span class="detail-value">{{ course.duration }}</span>
+      </div>
+      <div class="detail-item full-width">
+        <span class="detail-label">Description</span>
+        <p class="detail-value description">{{ course.description }}</p>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #placeholder>
+    <div class="placeholder">
+      <div class="placeholder-icon">&#9432;</div>
+      <p>Select a course from the list to view its details.</p>
+    </div>
+  </ng-template>
+</div>
