@@ -1,0 +1,21 @@
+<div class="card detail-card" *ngIf="product; else emptyState">
+  <div class="detail-header">
+    <img [src]="product.image" [alt]="product.title" class="detail-image">
+    <div>
+      <h2>{{ product.title }}</h2>
+      <p class="muted">{{ product.category }}</p>
+      <p class="price">${{ product.price }}</p>
+      <p class="rating" *ngIf="product.rating">
+        Rating: {{ product.rating.rate }} / 5 ({{ product.rating.count }} reviews)
+      </p>
+    </div>
+  </div>
+
+  <p class="description">{{ product.description }}</p>
+</div>
+
+<ng-template #emptyState>
+  <div class="card detail-card empty-detail">
+    Select a product to view details.
+  </div>
+</ng-template>

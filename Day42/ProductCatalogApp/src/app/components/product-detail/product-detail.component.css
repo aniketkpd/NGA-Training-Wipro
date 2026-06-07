@@ -1,0 +1,45 @@
+.detail-card {
+  padding: 20px;
+}
+
+.detail-header {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.detail-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+}
+
+.description {
+  line-height: 1.6;
+  margin: 18px 0 0;
+}
+
+.muted {
+  color: #6b7280;
+  margin: 4px 0;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 6px 0;
+}
+
+.rating {
+  color: #374151;
+  margin: 4px 0 0;
+}
+
+.empty-detail {
+  padding: 20px;
+  color: #6b7280;
+}

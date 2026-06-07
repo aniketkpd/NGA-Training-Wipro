@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <div class="brand">📚 BookStore</div>
+  <ul class="nav-links">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+    <li><a routerLink="/best-sellers" routerLinkActive="active">Best Sellers</a></li>
+    <li><a routerLink="/fiction" routerLinkActive="active">Fiction</a></li>
+    <li><a routerLink="/non-fiction" routerLinkActive="active">Non-Fiction</a></li>
+    <li><a routerLink="/technology" routerLinkActive="active">Technology</a></li>
+    <li><a routerLink="/self-help" routerLinkActive="active">Self-Help</a></li>
+    <li><a routerLink="/children-books" routerLinkActive="active">Children's Books</a></li>
+    <li><a routerLink="/academic" routerLinkActive="active">Academic</a></li>
+    <li><a routerLink="/cart" routerLinkActive="active" class="cart-link">Cart <span class="badge">{{cartCount}}</span></a></li>
+  </ul>
+</nav>

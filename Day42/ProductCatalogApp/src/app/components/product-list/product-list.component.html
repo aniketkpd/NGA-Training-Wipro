@@ -1,0 +1,42 @@
+<div class="layout">
+  <section class="card panel">
+    <div class="toolbar">
+      <div>
+        <h1>Product Catalog</h1>
+        <p class="subtitle">Angular case study using Fake Store API</p>
+      </div>
+
+      <div class="search">
+        <input
+          type="text"
+          [(ngModel)]="searchText"
+          placeholder="Search by product or category"
+          aria-label="Search products"
+        >
+        <button (click)="filterProducts()">Search</button>
+        <button class="secondary" (click)="resetSearch()">Reset</button>
+      </div>
+    </div>
+
+    <p class="status" *ngIf="loading">Loading products...</p>
+    <p class="status error" *ngIf="error">{{ error }}</p>
+
+    <div class="grid" *ngIf="!loading && !error">
+      <article
+        class="product card"
+        *ngFor="let product of filteredProducts"
+        (click)="selectProduct(product)"
+        [class.active]="selectedProduct?.id === product.id"
+      >
+        <img [src]="product.image" [alt]="product.title" class="thumb">
+        <h3>{{ product.title }}</h3>
+        <p class="muted">{{ product.category }}</p>
+        <p class="price">${{ product.price }}</p>
+      </article>
+    </div>
+  </section>
+
+  <aside>
+    <app-product-detail [product]="selectedProduct"></app-product-detail>
+  </aside>
+</div>

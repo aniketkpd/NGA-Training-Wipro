@@ -1,0 +1,8 @@
+.navbar { background:#2c3e50; color:#fff; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+.brand { font-size:1.4rem; font-weight:700; }
+.nav-links { list-style:none; display:flex; gap:6px; margin:0; padding:0; flex-wrap:wrap; }
+.nav-links a { color:#ecf0f1; padding:8px 12px; border-radius:4px; font-size:0.9rem; }
+.nav-links a:hover, .nav-links a.active { background:#34495e; }
+.cart-link { background:#e67e22; }
+.cart-link:hover, .cart-link.active { background:#d35400 !important; }
+.badge { background:#fff; color:#e67e22; border-radius:12px; padding:2px 8px; margin-left:6px; font-weight:700; font-size:0.8rem; }
